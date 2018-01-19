@@ -1,4 +1,5 @@
 /* MonoPrice */
+
 String MonoPrice "MonoPrice Amp [%s]" { serial="/dev/ttyUSB1@9600" }
 String MonoPrice_Status "MonoPrice Status [%s]"
 String MonoPrice_Status_G1 "MP G1 (Zone) [%s]"
@@ -12,6 +13,7 @@ String MonoPrice_Status_G8 "MP G8 (Bass Status) [%s]"
 String MonoPrice_Status_G9 "MP G9 (Balance) [%s]"
 String MonoPrice_Status_G10 "MP G10 (Src Status) [%s]"
 String MonoPrice_Status_G11 "MP G11 (Keypad Status) [%s]"
+
 Switch MonoPrice_Z1_PWR "Zone 1 Power"
 Switch MonoPrice_Z2_PWR "Zone 2 Power"
 Switch MonoPrice_Z3_PWR "Zone 3 Power"
@@ -24,12 +26,14 @@ Switch MonoPrice_Z3_Mute "Zone 3 Mute"
 Switch MonoPrice_Z4_Mute "Zone 4 Mute"
 Switch MonoPrice_Z5_Mute "Zone 5 Mute"
 Switch MonoPrice_Z6_Mute "Zone 6 Mute"
+
 Dimmer MonoPrice_Z1_Volume "Zone 1 Volume [%02d %%]"
 Dimmer MonoPrice_Z2_Volume "Zone 2 Volume [%02d %%]"
 Dimmer MonoPrice_Z3_Volume "Zone 3 Volume [%02d %%]"
 Dimmer MonoPrice_Z4_Volume "Zone 4 Volume [%02d %%]"
 Dimmer MonoPrice_Z5_Volume "Zone 5 Volume [%02d %%]"
 Dimmer MonoPrice_Z6_Volume "Zone 6 Volume [%02d %%]"
+
 Number MonoPrice_Z1_Source "Zone 1 Source"
 Number MonoPrice_Z2_Source "Zone 2 Source"
 Number MonoPrice_Z3_Source "Zone 3 Source"
