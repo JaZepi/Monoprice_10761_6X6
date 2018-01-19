@@ -11,10 +11,12 @@ var Matcher matcher = null
 var Number volume_z1 = 0
 var Number volume_z2 = 0
 var Number volume_z3 = 0
+var Number volume_z4 = 0
+var Number volume_z5 = 0
+var Number volume_z6 = 0
 
-/**
-* These rules control MonoPrice 6-Zone Audio Amplifer
-*/
+/*** These rules control MonoPrice 6-Zone Audio Amplifer*/
+
 rule "MonoPrice Zone 1 Power"
 when
         Item MonoPrice_Z1_PWR received command
@@ -204,6 +206,195 @@ then
         postUpdate(MonoPrice_Status, MonoPrice.state.toString.trim)
 end
 
+rule "MonoPrice Zone 4 Power"
+when
+        Item MonoPrice_Z4_PWR received command
+then
+        if(receivedCommand==ON) {
+                sendCommand(MonoPrice, "<14PR01\r")
+                logInfo("MonoPrice", "Zone 4 Power ON")
+        }
+        else if(receivedCommand==OFF) {
+                sendCommand(MonoPrice, "<14PR00\r")
+                logInfo("MonoPrice", "Zone 4 Power OFF")
+        }
+        sendCommand(MonoPrice, "?14\r")
+        Thread::sleep(1000)
+        postUpdate(MonoPrice_Status, MonoPrice.state.toString.trim)
+end
+
+rule "MonoPrice Zone 4 Source"
+when
+        Item MonoPrice_Z4_Source received update
+then
+        sendCommand(MonoPrice, "<14CH0" + MonoPrice_Z4_Source.state.toString + "\r")
+        sendCommand(MonoPrice, "?14\r")
+        Thread::sleep(1000)
+        postUpdate(MonoPrice_Status, MonoPrice.state.toString.trim)
+end
+
+rule "MonoPrice Zone 4 Volume"
+when
+        Item MonoPrice_Z4_Volume received command
+then
+        if(receivedCommand instanceof PercentType) {                    //We received a direct slider input value
+                volume_z4 = receivedCommand
+                volume_z4 = (volume_z4 * 38 / 100).intValue             //Scale percentage of volume to Monoprice scale (0 to 38)
+        } else {
+                        if(receivedCommand==INCREASE)                   //We received input from the UP/DOWN buttons
+                        {
+                                volume_z4 = volume_z4 + 1
+                        }
+                        if(receivedCommand==DECREASE)
+                        {
+                                volume_z4 = volume_z4 - 1
+                        }
+                }
+        if (volume_z4>9) {sendCommand(MonoPrice, "<14VO" + volume_z4.toString("%02d") + "\r") }         //Send out Volume command
+        else {sendCommand(MonoPrice, "<14VO0" + volume_z4.toString("%02d") + "\r") }
+        postUpdate(MonoPrice_Z4_Volume, (volume_z4 / 38 * 100).intValue)                                //Update Slider % value
+        sendCommand(MonoPrice, "?14\r")
+        Thread::sleep(1000)
+        postUpdate(MonoPrice_Status, MonoPrice.state.toString.trim)
+end
+
+rule "MonoPrice Zone 4 Mute"
+when
+        Item MonoPrice_Z4_Mute received command
+then
+        if(receivedCommand==ON)         sendCommand(MonoPrice, "<14MU01\r")
+        else if(receivedCommand==OFF)   sendCommand(MonoPrice, "<14MU00\r")
+        sendCommand(MonoPrice, "?14\r")
+        Thread::sleep(1000)
+        postUpdate(MonoPrice_Status, MonoPrice.state.toString.trim)
+end
+
+rule "MonoPrice Zone 5 Power"
+when
+        Item MonoPrice_Z5_PWR received command
+then
+        if(receivedCommand==ON) {
+                sendCommand(MonoPrice, "<15PR01\r")
+                logInfo("MonoPrice", "Zone 5 Power ON")
+        }
+        else if(receivedCommand==OFF) {
+                sendCommand(MonoPrice, "<15PR00\r")
+                logInfo("MonoPrice", "Zone 5 Power OFF")
+        }
+        sendCommand(MonoPrice, "?15\r")
+        Thread::sleep(1000)
+        postUpdate(MonoPrice_Status, MonoPrice.state.toString.trim)
+end
+
+rule "MonoPrice Zone 5 Source"
+when
+        Item MonoPrice_Z5_Source received update
+then
+        sendCommand(MonoPrice, "<15CH0" + MonoPrice_Z5_Source.state.toString + "\r")
+        sendCommand(MonoPrice, "?15\r")
+        Thread::sleep(1000)
+        postUpdate(MonoPrice_Status, MonoPrice.state.toString.trim)
+end
+
+rule "MonoPrice Zone 5 Volume"
+when
+        Item MonoPrice_Z5_Volume received command
+then
+        if(receivedCommand instanceof PercentType) {                    //We received a direct slider input value
+                volume_z5 = receivedCommand
+                volume_z5 = (volume_z5 * 38 / 100).intValue             //Scale percentage of volume to Monoprice scale (0 to 38)
+        } else {
+                        if(receivedCommand==INCREASE)                   //We received input from the UP/DOWN buttons
+                        {
+                                volume_z5 = volume_z5 + 1
+                        }
+                        if(receivedCommand==DECREASE)
+                        {
+                                volume_z5 = volume_z5 - 1
+                        }
+                }
+        if (volume_z5>9) {sendCommand(MonoPrice, "<15VO" + volume_z5.toString("%02d") + "\r") }         //Send out Volume command
+        else {sendCommand(MonoPrice, "<15VO0" + volume_z5.toString("%02d") + "\r") }
+        postUpdate(MonoPrice_Z5_Volume, (volume_z5 / 38 * 100).intValue)                                //Update Slider % value
+        sendCommand(MonoPrice, "?15\r")
+        Thread::sleep(1000)
+        postUpdate(MonoPrice_Status, MonoPrice.state.toString.trim)
+end
+
+rule "MonoPrice Zone 5 Mute"
+when
+        Item MonoPrice_Z5_Mute received command
+then
+        if(receivedCommand==ON)         sendCommand(MonoPrice, "<15MU01\r")
+        else if(receivedCommand==OFF)   sendCommand(MonoPrice, "<15MU00\r")
+        sendCommand(MonoPrice, "?15\r")
+        Thread::sleep(1000)
+        postUpdate(MonoPrice_Status, MonoPrice.state.toString.trim)
+end
+
+rule "MonoPrice Zone 5 Power"
+when
+        Item MonoPrice_Z5_PWR received command
+then
+        if(receivedCommand==ON) {
+                sendCommand(MonoPrice, "<15PR01\r")
+                logInfo("MonoPrice", "Zone 5 Power ON")
+        }
+        else if(receivedCommand==OFF) {
+                sendCommand(MonoPrice, "<15PR00\r")
+                logInfo("MonoPrice", "Zone 5 Power OFF")
+        }
+        sendCommand(MonoPrice, "?15\r")
+        Thread::sleep(1000)
+        postUpdate(MonoPrice_Status, MonoPrice.state.toString.trim)
+end
+
+rule "MonoPrice Zone 6 Source"
+when
+        Item MonoPrice_Z6_Source received update
+then
+        sendCommand(MonoPrice, "<16CH0" + MonoPrice_Z6_Source.state.toString + "\r")
+        sendCommand(MonoPrice, "?16\r")
+        Thread::sleep(1000)
+        postUpdate(MonoPrice_Status, MonoPrice.state.toString.trim)
+end
+
+rule "MonoPrice Zone 6 Volume"
+when
+        Item MonoPrice_Z6_Volume received command
+then
+        if(receivedCommand instanceof PercentType) {                    //We received a direct slider input value
+                volume_z6 = receivedCommand
+                volume_z6 = (volume_z6 * 38 / 100).intValue             //Scale percentage of volume to Monoprice scale (0 to 38)
+        } else {
+                        if(receivedCommand==INCREASE)                   //We received input from the UP/DOWN buttons
+                        {
+                                volume_z6 = volume_z6 + 1
+                        }
+                        if(receivedCommand==DECREASE)
+                        {
+                                volume_z6 = volume_z6 - 1
+                        }
+                }
+        if (volume_z6>9) {sendCommand(MonoPrice, "<16VO" + volume_z65.toString("%02d") + "\r") }         //Send out Volume command
+        else {sendCommand(MonoPrice, "<16VO0" + volume_z6.toString("%02d") + "\r") }
+        postUpdate(MonoPrice_Z6_Volume, (volume_z6 / 38 * 100).intValue)                                //Update Slider % value
+        sendCommand(MonoPrice, "?16\r")
+        Thread::sleep(1000)
+        postUpdate(MonoPrice_Status, MonoPrice.state.toString.trim)
+end
+
+rule "MonoPrice Zone 6 Mute"
+when
+        Item MonoPrice_Z5_Mute received command
+then
+        if(receivedCommand==ON)         sendCommand(MonoPrice, "<16MU01\r")
+        else if(receivedCommand==OFF)   sendCommand(MonoPrice, "<16MU00\r")
+        sendCommand(MonoPrice, "?16\r")
+        Thread::sleep(1000)
+        postUpdate(MonoPrice_Status, MonoPrice.state.toString.trim)
+end
+
 rule "MonoPrice Status on command change"
 when
         Item MonoPrice_Status changed or
@@ -216,6 +407,9 @@ then
         if(matcher.group(1) == 11) postUpdate (MonoPrice_Z1_Volume, matcher.group(6))
         else if (matcher.group(1) == 12) postUpdate (MonoPrice_Z2_Volume, matcher.group(6))
         else if (matcher.group(1) == 13) postUpdate (MonoPrice_Z3_Volume, matcher.group(6))
+        else if (matcher.group(1) == 14) postUpdate (MonoPrice_Z4_Volume, matcher,group(6))
+        else if (matcher.group(1) == 15) postUpdate (MonoPrice_Z5_Volume, matcher,group(6))
+        else if (matcher.group(1) == 16) postUpdate (MonoPrice_Z6_Volume, matcher,group(6))
         postUpdate(MonoPrice_Status_G2, matcher.group(2))
         postUpdate(MonoPrice_Status_G3, matcher.group(3))
         postUpdate(MonoPrice_Status_G4, matcher.group(4))
