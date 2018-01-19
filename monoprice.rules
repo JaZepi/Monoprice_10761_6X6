@@ -15,9 +15,7 @@ var Number volume_z4 = 0
 var Number volume_z5 = 0
 var Number volume_z6 = 0
 
-/**
-* These rules control MonoPrice 6-Zone Audio Amplifer
-*/
+/*** These rules control MonoPrice 6-Zone Audio Amplifer*/
 
 rule "MonoPrice Zone 1 Power"
 when
