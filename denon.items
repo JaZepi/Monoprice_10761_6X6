@@ -1,32 +1,32 @@
-Switch DenonPower			"Power"					{denon="avr2000#PW"}
-Switch DenonMainZone		"Main Zone"				{denon="avr2000#ZM"}
-Dimmer DenonVolume			"Volume [%.1f]"			{denon="avr2000#MV"}
-Switch DenonMute			"Mute"					{denon="avr2000#MU"}
-String DenonSurroundMode	"Surround mode [%s]"	{denon="avr2000#SURROUNDMODE"}
-String DenonCommand			"Command"				{denon="avr2000#COMMAND", autoupdate=false}
+Switch DenonPower			"Power"					{denon="avr3300#PW"}
+Switch DenonMainZone		"Main Zone"				{denon="avr3300#ZM"}
+Dimmer DenonVolume			"Volume [%.1f]"			{denon="avr3300#MV"}
+Switch DenonMute			"Mute"					{denon="avr3300#MU"}
+String DenonSurroundMode	"Surround mode [%s]"	{denon="avr3300#SURROUNDMODE"}
+String DenonCommand			"Command"				{denon="avr3300#COMMAND", autoupdate=false}
 
-String DenonCurrentTrack		"Current track [%s]"		{denon="avr2000#TRACK"}
-String DenonCurrentArtist		"Current artist [%s]"		{denon="avr2000#ARTIST"}
-String DenonCurrentAlbum		"Current album [%s]"		{denon="avr2000#ALBUM"}
+String DenonCurrentTrack		"Current track [%s]"		{denon="avr3300#TRACK"}
+String DenonCurrentArtist		"Current artist [%s]"		{denon="avr3300#ARTIST"}
+String DenonCurrentAlbum		"Current album [%s]"		{denon="avr3300#ALBUM"}
 
-String DenonInput			"Input [%s]"			{denon="avr2000#INPUT"}
-Switch DenonInputCD			"Input CD"				{denon="avr2000#SICD"}
-Switch DenonInputUSBIPOD	"Input USB/IPOD"		{denon="avr2000#SIUSB/IPOD"}
-Switch DenonInputNet		"Input Network"			{denon="avr2000#SINET"}
-Switch DenonInputSpotify	"Input Spotify"			{denon="avr2000#SISPOTIFY"}
-Switch DenonInputTuner		"Input Tuner"			{denon="avr2000#SITUNER"}
-Switch DenonInputDVD		"Input DVD"				{denon="avr2000#SIDVD"}
-Switch DenonInputBluray		"Input Bluray"			{denon="avr2000#SIBD"}
-Switch DenonInputTV			"Input TV"				{denon="avr2000#SITV"}
-Switch DenonInputSATCBL		"Input SAT/CBL"			{denon="avr2000#SISAT/CBL"}
-Switch DenonInputMplay		"Input Mediaplayer"		{denon="avr2000#SIMPLAY"}
-Switch DenonInputGame		"Input Game"			{denon="avr2000#SIGAME"}
-Switch DenonInputAux1		"Input Aux1"			{denon="avr2000#SIAUX1"}
+String DenonInput			"Input [%s]"			{denon="avr3300#INPUT"}
+Switch DenonInputCD			"Input CD"				{denon="avr3300#SICD"}
+Switch DenonInputUSBIPOD	"Input USB/IPOD"		{denon="avr3300#SIUSB/IPOD"}
+Switch DenonInputNet		"Input Network"			{denon="avr3300#SINET"}
+Switch DenonInputSpotify	"Input Spotify"			{denon="avr3300#SISPOTIFY"}
+Switch DenonInputTuner		"Input Tuner"			{denon="avr3300#SITUNER"}
+Switch DenonInputDVD		"Input DVD"				{denon="avr3300#SIDVD"}
+Switch DenonInputBluray		"Input Bluray"			{denon="avr3300#SIBD"}
+Switch DenonInputTV			"Input TV"				{denon="avr3300#SITV"}
+Switch DenonInputSATCBL		"Input SAT/CBL"			{denon="avr3300#SISAT/CBL"}
+Switch DenonInputMplay		"Input Mediaplayer"		{denon="avr3300#SIMPLAY"}
+Switch DenonInputGame		"Input Game"			{denon="avr3300#SIGAME"}
+Switch DenonInputAux1		"Input Aux1"			{denon="avr3300#SIAUX1"}
 
-Switch DenonZoneTwo					"Zone 2"				{denon="avr2000#Z2"}
-Dimmer DenonZoneTwoVolume			"Volume [%.1f]"			{denon="avr2000#Z2ZV"}
-Switch DenonZoneTwoMute				"Zone 2 Mute"			{denon="avr2000#Z2MU"}
+Switch DenonZoneTwo					"Zone 2"				{denon="avr3300#Z2"}
+Dimmer DenonZoneTwoVolume			"Volume [%.1f]"			{denon="avr3300#Z2ZV"}
+Switch DenonZoneTwoMute				"Zone 2 Mute"			{denon="avr3300#Z2MU"}
 
-Switch DenonZoneTwoInputSource		"Zone 2 Input Source"	{denon="avr2000#Z2SOURCE"}
-Switch DenonZoneTwoInputUSB			"Zone 2 Input USB"		{denon="avr2000#Z2USB/IPOD"}
-Switch DenonZoneTwoInputTuner		"Zone 2 Tuner"			{denon="avr2000#Z2TUNER"}
+Switch DenonZoneTwoInputSource		"Zone 2 Input Source"	{denon="avr3300#Z2SOURCE"}
+Switch DenonZoneTwoInputUSB			"Zone 2 Input USB"		{denon="avr3300#Z2USB/IPOD"}
+Switch DenonZoneTwoInputTuner		"Zone 2 Tuner"			{denon="avr3300#Z2TUNER"}

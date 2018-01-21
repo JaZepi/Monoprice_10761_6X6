@@ -1,6 +1,6 @@
 /* MonoPrice */
 
-String MonoPrice "MonoPrice Amp [%s]" { serial="/dev/ttyUSB1@9600" }
+String MonoPrice "MonoPrice Amp [%s]" { http="172.16.1.100" }
 String MonoPrice_Status "MonoPrice Status [%s]"
 String MonoPrice_Status_G1 "MP G1 (Zone) [%s]"
 String MonoPrice_Status_G2 "MP G2 (PA Status) [%s]"
