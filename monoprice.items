@@ -3,6 +3,7 @@
 /denon:avr3300.host=172.16.1.90/
 
 MonoPrice:monoprice.host=172.16.1.100
+Monoprice:monoprice.update=http
 
 String MonoPrice "MonoPrice Amp [%s]" { http="172.16.1.100" }
 String MonoPrice_Status "MonoPrice Status [%s]"
