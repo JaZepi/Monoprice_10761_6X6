@@ -2,7 +2,7 @@
 
 String MonoPrice "MonoPrice Amp [%s]" { serial="/dev/ttyUSB1@9600" }  //this needs to be edited to use GC iTACH Flex
 String MonoPrice_Status "MonoPrice Status [%s]"                       // TCP="172.16.1.100" ?
-String MonoPrice_Status_G1 "MP G1 (Zone) [%s]"
+String MonoPrice_Status_G1 "MP G1 (Zone) [%s]"                       // { tcp=">[172.16.1.100:2103]" }
 String MonoPrice_Status_G2 "MP G2 (PA Status) [%s]"
 String MonoPrice_Status_G3 "MP G3 (Pwr Status) [%s]"
 String MonoPrice_Status_G4 "MP G4 (Mute Status) [%s]"
