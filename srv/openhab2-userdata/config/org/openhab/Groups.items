@@ -1,0 +1,81 @@
+/* Groups */
+
+Group gAll
+
+/*Location Groups */
+
+Group gHouse "House" (gAll)
+Group gYard "Yard" (gAll)
+
+    Group gMF   "Main Floor"          (gHouse)   
+        Group gLR   "Living Room"         (gMF)
+        Group gKT   "Kitchen"             (gMF)
+        Group gDR   "Dining Room"         (gMF)
+        Group gMFB  "Main Floor Bathroom" (gMF)
+        Group gENT  "Entrance"            (gMF)
+        Group gMUD  "Mudroom"             (gMF)
+        Group gPTY  "Pantry"              (gMF)
+        Group gHLL  "Hall"                (gMF)
+        Group gGRG  "Garage"              (gMF)
+        Group gDCK  "Deck"                (gMF)
+
+    Group gUS   "Upstairs"            (gHouse)
+        Group gMR   "Myalle's Bedroom"    (gUS)
+        Group gKR   "Kaileya's Room"      (gUS) 
+        Group gMBR  "Master Bedroom"      (gUS)
+        Group gLFT  "Loft"                (gUS)
+        Group gUSB  "Upstairs Bathroom"   (gUS)
+
+    Group gOS   "Outside"             (gYard)
+        Group gFOS "Front Outside" (gOS)
+        Group gBOS "Back Yard" (gOS)
+
+    Group gBS   "Basement"            (gHouse)
+        Group gBsB "Basement Bathroom" (gBS)
+        Group gBsRR "Basement Rec Room" (gBS)
+        Group gBsUR "Basement Utility Room Lights" (gBS)
+
+/*Light Groups */
+
+Group gLights "Lights"            (gAll)
+
+    Group gLtsMF  "Main Floor Lights" (gMF, gLights)
+        
+        Group gLtsLR "Living Room Lights" (gLtsMF)
+        Group gLtsKt "Kitchen Lights" (gLtsMF)
+        Group gLtDR "Dining Room Lights" (gLtsMF)
+        Group gLtMUD "Mud Room lights" (gLtsMF)
+        Group gLtEnt "Entrance Lights" (gLtsMF)
+
+    Group gLtsBS  "Basement Lights"     (gBS, gLights)
+        Group gLtsBDn "Basement Rec Room Lights" (gLtsBS)
+        Group gLtsBsB "Basement Bathroom Lights" (gLtsBS)    
+    
+    Group gLtsOS  "Outside Lights"      (gOS, gLights)
+        Group gLtsFr "Front Lights"         (gLtsOS)
+        Group gLtsBK "Back Lights"          (gLtsOS)
+    
+    Group gLtsSF  "Upstairs Lights"   (gUS, gLights)
+        Group gLtsKR "Kaileya's Room Lights" (gLtsSF)
+        Group gLtsMR "Myalle's Room Lights"   (gLtsSF)
+        Group gLtSMBR "Master Bedroom Lights" (gLtsSF)
+        Group gLtsLFT "Loft Lights"           (gLtsSF)
+        Group gUSB    "Upstairs Bathroom Lights" (gLtsSF)
+
+
+
+
+
+
+
+/*Misc Groups*/
+
+
+
+/*Macro Groups*/
+
+/*Home Theatre Groups*/
+
+
+
+
