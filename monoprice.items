@@ -1,5 +1,9 @@
 /* MonoPrice */
 
+/denon:avr3300.host=172.16.1.90/
+
+MonoPrice:monoprice.host=172.16.1.100
+
 String MonoPrice "MonoPrice Amp [%s]" { http="172.16.1.100" }
 String MonoPrice_Status "MonoPrice Status [%s]"
 String MonoPrice_Status_G1 "MP G1 (Zone) [%s]"
