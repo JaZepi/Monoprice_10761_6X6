@@ -5,7 +5,7 @@
 MonoPrice:monoprice.host=172.16.1.100
 Monoprice:monoprice.update=http
 
-String MonoPrice "MonoPrice Amp [%s]" { http="172.16.1.100" }
+String MonoPrice "MonoPrice Amp [%s]" { TCP="172.16.1.100" }
 String MonoPrice_Status "MonoPrice Status [%s]"
 String MonoPrice_Status_G1 "MP G1 (Zone) [%s]"
 String MonoPrice_Status_G2 "MP G2 (PA Status) [%s]"

@@ -1,0 +1,62 @@
+/* Formatting: Group [item=<itemname>] [label="<labelname>"] [icon="<iconname>"]                                     */
+/*             Frame [label="<labelname>"] [icon="<icon>"] [item=<item>]                                             */
+/*             Image [item=<itemname>] [icon="<iconname>"] url="<url of image>" [label="<labelname>"] [refresh=xxxx] */
+/*             Selection item=<itemname> [label="<labelname>"] [icon="<iconname>"] [mappings="<mapping definition>"] */
+/*             Setpoint item=<itemname> [label="<labelname>"] [icon="<iconname>"] minValue=<min value> maxValue=<max value> step=<step value> */
+/*             Slider item=<itemname> [label="<labelname>"] [icon="<iconname>"] [sendFrequency="frequency"] [switchSupport] */
+/*    refer to: https://github.com/openhab/openhab1-addons/wiki/Explanation-of-Sitemaps for more                            */
+
+
+
+
+sitemap label="Our Home Automation"
+
+{
+    
+Frame Label="Date and Time"              {
+    
+    Text item=date
+
+    Text item=time
+
+}
+
+Frame Label="Overview"                   {
+
+    Text item=Temperature label="House [%.1f °C]"      //to be implimented later
+    Group item=Heating
+
+
+}
+
+Frame Label="Living Room"                {
+
+    Group item=Living Room
+}
+
+Frame Label="Kitchen & Dining Room"      {
+
+    Group item=KitchenDining Room
+
+}
+
+Frame Label="Garage"                     {
+
+    Group item=Garage
+
+}
+
+Frame Label="Back Yard"                  {  
+
+    Group item=Back Yard
+
+}
+
+Frame Label="Front Yard"                 {
+
+    Group item=Front Yard
+
+}
+
+
+}
