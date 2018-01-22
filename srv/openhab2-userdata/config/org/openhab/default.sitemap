@@ -19,6 +19,8 @@ Frame Label="Date and Time"              {
 
     Text item=time
 
+    //Insert a weather app in here
+
 }
 
 Frame Label="Overview"                   {
