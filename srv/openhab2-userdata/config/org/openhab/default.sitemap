@@ -60,5 +60,19 @@ Frame Label="Front Yard"                 {
 
 }
 
+Frame Label="Myalle's Room"              {  
 
+    Group item=Myalles Room
+    
+}
+
+Frame Label="Kaileya's Room"             {
+
+    Group item=Kaileyas Room
+
+}
+
+Frame Label="Master Bedroom"             {
+
+    Group item=Master Bedroom
 }
