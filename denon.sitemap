@@ -8,7 +8,7 @@ Frame label="Main Zone" {
 	Text item=DenonSurroundMode
 }
 Frame label="Main Zone Input" {
-	Selection label="Input" item=DenonInput mappings=[CD="CD", TUNER="Tuner", DVD="DVD", BD="Bluray", TV="TV", "SAT/CBL"="SAT/CBL", MPLAY="Mediaplayer", GAME="Game", AUX1="Aux1"]
+	Selection label="Input" item=DenonInput mappings=[CD="MultiZone", TUNER="Tuner", DVD="DVD", BD="PS4", TV="TV", "SAT/CBL"="Kodi", MPLAY="Mediaplayer", GAME="Game", AUX1="Aux1"]
 	Text item=DenonInput
 	Switch item=DenonInputCD mappings=[ON="CD"]
 	Switch item=DenonInputTuner mappings=[ON="Tuner"]

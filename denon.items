@@ -5,9 +5,9 @@ Switch DenonMute			"Mute"					{denon="avr3300#MU"}
 String DenonSurroundMode	"Surround mode [%s]"	{denon="avr3300#SURROUNDMODE"}
 String DenonCommand			"Command"				{denon="avr3300#COMMAND", autoupdate=false}
 
-String DenonCurrentTrack		"Current track [%s]"		{denon="avr3300#TRACK"}
-String DenonCurrentArtist		"Current artist [%s]"		{denon="avr3300#ARTIST"}
-String DenonCurrentAlbum		"Current album [%s]"		{denon="avr3300#ALBUM"}
+String DenonCurrentTrack	"Current track [%s]"	{denon="avr3300#TRACK"}
+String DenonCurrentArtist	"Current artist [%s]"	{denon="avr3300#ARTIST"}
+String DenonCurrentAlbum	"Current album [%s]"	{denon="avr3300#ALBUM"}
 
 String DenonInput			"Input [%s]"			{denon="avr3300#INPUT"}
 Switch DenonInputCD			"Input CD"				{denon="avr3300#SICD"}
@@ -23,10 +23,10 @@ Switch DenonInputMplay		"Input Mediaplayer"		{denon="avr3300#SIMPLAY"}
 Switch DenonInputGame		"Input Game"			{denon="avr3300#SIGAME"}
 Switch DenonInputAux1		"Input Aux1"			{denon="avr3300#SIAUX1"}
 
-Switch DenonZoneTwo					"Zone 2"				{denon="avr3300#Z2"}
-Dimmer DenonZoneTwoVolume			"Volume [%.1f]"			{denon="avr3300#Z2ZV"}
-Switch DenonZoneTwoMute				"Zone 2 Mute"			{denon="avr3300#Z2MU"}
+Switch DenonZoneTwo			"Zone 2"				{denon="avr3300#Z2"}
+Dimmer DenonZoneTwoVolume	"Volume [%.1f]"			{denon="avr3300#Z2ZV"}
+Switch DenonZoneTwoMute		"Zone 2 Mute"			{denon="avr3300#Z2MU"}
 
-Switch DenonZoneTwoInputSource		"Zone 2 Input Source"	{denon="avr3300#Z2SOURCE"}
-Switch DenonZoneTwoInputUSB			"Zone 2 Input USB"		{denon="avr3300#Z2USB/IPOD"}
-Switch DenonZoneTwoInputTuner		"Zone 2 Tuner"			{denon="avr3300#Z2TUNER"}
+Switch DenonZoneTwoInputSource	"Zone 2 Input Source"	{denon="avr3300#Z2SOURCE"}
+Switch DenonZoneTwoInputUSB		"Zone 2 Input USB"		{denon="avr3300#Z2USB/IPOD"}
+Switch DenonZoneTwoInputTuner	"Zone 2 Tuner"			{denon="avr3300#Z2TUNER"}
