@@ -1,0 +1,48 @@
+Frame label="MonoPrice" {
+                                Text item=MonoPrice
+                                Text item=MonoPrice_Status
+                                Text item=MonoPrice_Status_G1
+                                Text item=MonoPrice_Status_G2
+                                Text item=MonoPrice_Status_G3
+                                Text item=MonoPrice_Status_G4
+                                Text item=MonoPrice_Status_G5
+                                Text item=MonoPrice_Status_G6
+                                Text item=MonoPrice_Status_G7
+                                Text item=MonoPrice_Status_G8
+                                Text item=MonoPrice_Status_G9
+                                Text item=MonoPrice_Status_G10
+                                Text item=MonoPrice_Status_G11
+                                
+                                
+                                Switch item=MonoPrice_Z1_PWR
+                                Switch item=MonoPrice_Z1_Source label="Zone 1 Source" mappings=[1=CH1,2=BT,3=CH3,4=CH4,5=CH5,6=CD] visibility=[MonoPrice_Z1_PWR==ON]
+                                Slider item=MonoPrice_Z1_Volume visibility=[MonoPrice_Z1_PWR==ON]
+                                Switch item=MonoPrice_Z1_Mute visibility=[MonoPrice_Z1_PWR==ON]
+                                
+                                Switch item=MonoPrice_Z2_PWR
+                                Switch item=MonoPrice_Z2_Source label="Zone 2 Source" mappings=[1=CH1,2=BT,3=CH3,4=CH4,5=CH5,6=CD] visibility=[MonoPrice_Z2_PWR==ON]
+                                Slider item=MonoPrice_Z2_Volume visibility=[MonoPrice_Z2_PWR==ON]
+                                Switch item=MonoPrice_Z2_Mute visibility=[MonoPrice_Z2_PWR==ON]
+                                
+                                Switch item=MonoPrice_Z3_PWR
+                                Switch item=MonoPrice_Z3_Source label="Zone 3 Source" mappings=[1=CH1,2=BT,3=CH3,4=CH4,5=CH5,6=CD] visibility=[MonoPrice_Z3_PWR==ON]
+                                Slider item=MonoPrice_Z3_Volume visibility=[MonoPrice_Z3_PWR==ON]
+                                Switch item=MonoPrice_Z3_Mute visibility=[MonoPrice_Z3_PWR==ON]
+
+                                Switch item=MonoPrice_Z4_PWR
+                                Switch item=MonoPrice_Z4_Source label="Zone 4 Source" mappings=[1=CH1,2=BT,3=CH3,4=CH4,5=CH5,6=CD] visibility=[MonoPrice_Z4_PWR==ON]
+                                Slider item=MonoPrice_Z4_Volume visibility=[MonoPrice_Z4_PWR==ON]
+                                Switch item=MonoPrice_Z4_Mute visibility=[MonoPrice_Z4_PWR==ON]
+
+
+                                Switch item=MonoPrice_Z5_PWR
+                                Switch item=MonoPrice_Z5_Source label="Zone 5 Source" mappings=[1=CH1,2=BT,3=CH3,4=CH4,5=CH5,6=CD] visibility=[MonoPrice_Z3_PWR==ON]
+                                Slider item=MonoPrice_Z5_Volume visibility=[MonoPrice_Z5_PWR==ON]
+                                Switch item=MonoPrice_Z5_Mute visibility=[MonoPrice_Z5_PWR==ON]
+
+                                Switch item=MonoPrice_Z6_PWR
+                                Switch item=MonoPrice_Z6_Source label="Zone 3 Source" mappings=[1=CH1,2=BT,3=CH3,4=CH4,5=CH5,6=CD] visibility=[MonoPrice_Z6_PWR==ON]
+                                Slider item=MonoPrice_Z6_Volume visibility=[MonoPrice_Z6_PWR==ON]
+                                Switch item=MonoPrice_Z6_Mute visibility=[MonoPrice_Z6_PWR==ON]
+
+
