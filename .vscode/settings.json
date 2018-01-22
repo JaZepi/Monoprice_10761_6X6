@@ -3,7 +3,6 @@
     "openhab.port": null,
     "openhab.useRestApi": true,
     "window.zoomLevel": 1,
-    "workbench.colorTheme": "Liqube Dark Code",
-    "workbench.iconTheme": "vscode-great-icons",
-    "workbench.panel.location": "bottom"   
+    
+      
 }
